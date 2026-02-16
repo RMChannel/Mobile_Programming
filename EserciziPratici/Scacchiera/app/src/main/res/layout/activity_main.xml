@@ -1,19 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:id="@+id/main"
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/header"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="#91C7C7"
+        android:gravity="center"
+        android:text="Cito Roberto"
+        android:textColor="@android:color/black"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="4dp"
+        android:layout_margin="2dp" />
+
+    <TextView
+        android:id="@+id/displayValue"
+        android:layout_width="140dp"
+        android:layout_height="100dp"
+        android:background="@drawable/rounded_button"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="@android:color/black"
+        android:textSize="80sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header"
+        tools:layout_editor_absoluteY="78dp" />
+
+    <LinearLayout
+        android:id="@+id/gridContainer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:orientation="vertical"
+        android:layout_marginBottom="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/displayValue"
+        app:layout_constraintVertical_bias="0.4">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+            <TextView style="@style/ArrowTopBottom" android:text="↑" android:tag="up1" android:onClick="moveY"/>
+            <TextView style="@style/ArrowTopBottom" android:text="↑" android:tag="up2" android:onClick="moveY"/>
+            <TextView style="@style/ArrowTopBottom" android:text="↑" android:tag="up3" android:onClick="moveY"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical">
+                <TextView style="@style/ArrowSide" android:text="←" android:tag="left1" android:onClick="moveX"/>
+                <TextView style="@style/ArrowSide" android:text="←" android:tag="left2" android:onClick="moveX"/>
+                <TextView style="@style/ArrowSide" android:text="←" android:tag="left3" android:onClick="moveX"/>
+            </LinearLayout>
+
+            <TableLayout android:id="@+id/mainGrid" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@android:color/black" android:padding="1dp">
+                <TableRow>
+                    <TextView style="@style/GridCell"/>
+                    <TextView style="@style/GridCell"/>
+                    <TextView style="@style/GridCell"/>
+                </TableRow>
+                <TableRow>
+                    <TextView style="@style/GridCell"/>
+                    <TextView style="@style/GridCell"/>
+                    <TextView style="@style/GridCell"/>
+                </TableRow>
+                <TableRow>
+                    <TextView style="@style/GridCell"/>
+                    <TextView style="@style/GridCell"/>
+                    <TextView style="@style/GridCell"/>
+                </TableRow>
+            </TableLayout>
+
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical">
+                <TextView style="@style/ArrowSide" android:text="→" android:tag="right1" android:onClick="moveX"/>
+                <TextView style="@style/ArrowSide" android:text="→" android:tag="right2" android:onClick="moveX"/>
+                <TextView style="@style/ArrowSide" android:text="→" android:tag="right3" android:onClick="moveX"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+            <TextView style="@style/ArrowTopBottom" android:text="↓" android:tag="down1" android:onClick="moveY"/>
+            <TextView style="@style/ArrowTopBottom" android:text="↓" android:tag="down2" android:onClick="moveY"/>
+            <TextView style="@style/ArrowTopBottom" android:text="↓" android:tag="down3" android:onClick="moveY"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/btnReset"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/rounded_button"
+        android:gravity="center"
+        android:onClick="reset"
+        android:text="RESET"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
