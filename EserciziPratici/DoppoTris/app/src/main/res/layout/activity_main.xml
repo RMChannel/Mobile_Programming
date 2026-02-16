@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Cito Roberto"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text='Giocatore "X"'
+            android:textSize="24sp"/>
+
+        <GridLayout
+            android:id="@+id/grid1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:rowCount="3">
+
+            <Button android:id="@+id/btn_p1_0" android:layout_width="80dp" android:layout_height="80dp" android:background="@drawable/button_border" app:backgroundTint="@null" android:tag="1,0" android:onClick="buttonClicked"/>
+            <Button android:id="@+id/btn_p1_1" android:layout_width="80dp" android:layout_height="80dp" android:background="@drawable/button_border" app:backgroundTint="@null" android:tag="1,1" android:onClick="buttonClicked"/>
+            <Button android:id="@+id/btn_p1_2" android:layout_width="80dp" android:layout_height="80dp" android:background="@drawable/button_border" app:backgroundTint="@null" android:tag="1,2" android:onClick="buttonClicked"/>
+            <Button android:id="@+id/btn_p1_3" android:layout_width="80dp" android:layout_height="80dp" android:background="@drawable/button_border" app:backgroundTint="@null" android:tag="1,3" android:onClick="buttonClicked"/>
+            <Button android:id="@+id/btn_p1_4" android:layout_width="80dp" android:layout_height="80dp" android:background="@drawable/button_border" app:backgroundTint="@null" android:tag="1,4" android:onClick="buttonClicked"/>
+            <Button android:id="@+id/btn_p1_5" android:layout_width="80dp" android:layout_height="80dp" android:background="@drawable/button_border" app:backgroundTint="@null" android:tag="1,5" android:onClick="buttonClicked"/>
+            <Button android:id="@+id/btn_p1_6" android:layout_width="80dp" android:layout_height="80dp" android:background="@drawable/button_border" app:backgroundTint="@null" android:tag="1,6" android:onClick="buttonClicked"/>
+            <Button android:id="@+id/btn_p1_7" android:layout_width="80dp" android:layout_height="80dp" android:background="@drawable/button_border" app:backgroundTint="@null" android:tag="1,7" android:onClick="buttonClicked"/>
+            <Button android:id="@+id/btn_p1_8" android:layout_width="80dp" android:layout_height="80dp" android:background="@drawable/button_border" app:backgroundTint="@null" android:tag="1,8" android:onClick="buttonClicked"/>
+
+        </GridLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text='Giocatore "Y"'
+            android:layout_marginTop="16dp"
+            android:textSize="24sp"/>
+
+        <GridLayout
+            android:id="@+id/grid2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:columnCount="3"
+            android:rowCount="3">
+
+            <Button android:id="@+id/btn_p2_0" android:layout_width="80dp" android:layout_height="80dp" android:background="@drawable/button_border" app:backgroundTint="@null" android:tag="2,0" android:onClick="buttonClicked"/>
+            <Button android:id="@+id/btn_p2_1" android:layout_width="80dp" android:layout_height="80dp" android:background="@drawable/button_border" app:backgroundTint="@null" android:tag="2,1" android:onClick="buttonClicked"/>
+            <Button android:id="@+id/btn_p2_2" android:layout_width="80dp" android:layout_height="80dp" android:background="@drawable/button_border" app:backgroundTint="@null" android:tag="2,2" android:onClick="buttonClicked"/>
+            <Button android:id="@+id/btn_p2_3" android:layout_width="80dp" android:layout_height="80dp" android:background="@drawable/button_border" app:backgroundTint="@null" android:tag="2,3" android:onClick="buttonClicked"/>
+            <Button android:id="@+id/btn_p2_4" android:layout_width="80dp" android:layout_height="80dp" android:background="@drawable/button_border" app:backgroundTint="@null" android:tag="2,4" android:onClick="buttonClicked"/>
+            <Button android:id="@+id/btn_p2_5" android:layout_width="80dp" android:layout_height="80dp" android:background="@drawable/button_border" app:backgroundTint="@null" android:tag="2,5" android:onClick="buttonClicked"/>
+            <Button android:id="@+id/btn_p2_6" android:layout_width="80dp" android:layout_height="80dp" android:background="@drawable/button_border" app:backgroundTint="@null" android:tag="2,6" android:onClick="buttonClicked"/>
+            <Button android:id="@+id/btn_p2_7" android:layout_width="80dp" android:layout_height="80dp" android:background="@drawable/button_border" app:backgroundTint="@null" android:tag="2,7" android:onClick="buttonClicked"/>
+            <Button android:id="@+id/btn_p2_8" android:layout_width="80dp" android:layout_height="80dp" android:background="@drawable/button_border" app:backgroundTint="@null" android:tag="2,8" android:onClick="buttonClicked"/>
+
+        </GridLayout>
+        <Button
+            android:text="Riavvia la partita"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="reset">
+        </Button>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
